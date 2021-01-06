@@ -1,0 +1,1 @@
+# detnyscala_app
