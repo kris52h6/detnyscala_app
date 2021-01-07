@@ -7,28 +7,32 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p>Filter</p>
-    <div class="button_container">
-      <button class="filter button" onclick="openNav()" data-kategori="sjus">Sjus</button>
-      <button class="filter button" onclick="openNav()" data-kategori="flaskeøl">Flaskeøl</button>
-      <button class="filter button" onclick="openNav()" data-kategori="fadøl">Fadøl</button>
-      <button class="filter button" onclick="openNav()" data-kategori="vin">Vin</button>
-      <button class="filter button" onclick="openNav()" data-kategori="hjemme_shots">Hjemmelavede Shots</button>
-      <button class="filter button" onclick="openNav()" data-kategori="alle">Alle</button>
-    </div>
-    <section id="drinks" class="sidepanel">
-      <div class="closebtn" onclick="closeNav()">×</div>
-      <div class="logo_container"><img src="img/scala_logo.png" alt="" /></div>
-      <h1></h1>
-      <section class="drink-list"></section>
-      <template>
-        <div class="wrapper">
-          <h2></h2>
-          <p></p>
-          <img src="" />
-        </div>
-      </template>
-    </section>
+    <div class="splash-img"></div>
+    <main>
+      <div class="logo_container_large"><img class="logo" src="img/scala_logo.png" alt="" /></div>
+      <!-- <p>Filter</p> -->
+      <div class="button_container">
+        <button class="filter button" onclick="openNav()" data-kategori="sjus">Sjus</button>
+        <button class="filter button" onclick="openNav()" data-kategori="flaskeøl">Flaskeøl</button>
+        <button class="filter button" onclick="openNav()" data-kategori="fadøl">Fadøl</button>
+        <button class="filter button" onclick="openNav()" data-kategori="vin">Vin</button>
+        <button class="filter button" onclick="openNav()" data-kategori="hjemme_shots">Hjemmelavede Shots</button>
+        <button class="filter button" onclick="openNav()" data-kategori="alle">Alle</button>
+      </div>
+      <section id="drinks" class="sidepanel">
+        <div class="closebtn" onclick="closeNav()">×</div>
+        <!-- <div class="logo_container_small"><img src="img/scala_logo.png" alt="" /></div> -->
+        <h1></h1>
+        <section class="drink-list"></section>
+        <template>
+          <div class="wrapper">
+            <h2></h2>
+            <p></p>
+            <img src="" />
+          </div>
+        </template>
+      </section>
+    </main>
   </body>
   <script src="script.js"></script>
   <script src="script2.js"></script>

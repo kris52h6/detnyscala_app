@@ -6,6 +6,21 @@
 img {
   width: 100%;
 }
+main {
+  position: absolute;
+}
+.splash-img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: grayscale(1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url("img/scala_splashv2-100.jpg");
+}
 
 /* .valgt {
   text-decoration: none;
@@ -18,6 +33,16 @@ img {
   grid-gap: 1rem;
 }
 
+.logo_container_large {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 50%;
+}
+
 .button_container {
   display: grid;
   justify-content: center;
@@ -27,12 +52,16 @@ img {
 
 .filter {
   width: 100vw;
-  height: 10vh;
+  height: 13vh;
 }
 
-.buttons {
+.button {
   color: white;
-  background-color: black;
+  background-color: #333232;
+  border: white solid 1px;
+
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
 }
 
 .sidepanel {
