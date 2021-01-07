@@ -29,7 +29,6 @@ function displayDrinks() {
     if (filterDrinks == "alle" || filterDrinks == drink.gsx$kategori.$t) {
       const klon = skabelon.cloneNode(true).content;
 
-      klon.querySelector("h1").textContent = `${drink.gsx$kategori.$t}`;
       klon.querySelector("h2").textContent = `${drink.gsx$navn.$t}`;
       klon.querySelector("p").textContent = `${drink.gsx$pris.$t}` + ".-";
 
@@ -47,7 +46,7 @@ function handleFilter() {
   /* tilføjer variablen filteralbum til datasetet kategori og tilføjer valgt */
   filterDrinks = this.dataset.kategori;
   this.classList.add("valgt");
-
+  document.querySelector("h1").textContent = filterDrinks;
   /* kalder funktionen visGS */
   displayDrinks();
 }
