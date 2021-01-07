@@ -1,3 +1,12 @@
+* {
+  margin: 0 0 0 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
 /* .valgt {
   text-decoration: none;
   border-bottom: 0.1em solid #1b5728;
@@ -19,6 +28,11 @@
 .filter {
   width: 100vw;
   height: 10vh;
+}
+
+.buttons {
+  color: white;
+  background-color: black;
 }
 
 .sidepanel {
