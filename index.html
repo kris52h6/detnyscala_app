@@ -23,9 +23,27 @@
       <section class="drink-list"></section>
       <template>
         <div class="wrapper">
-          <h2></h2>
-          <p></p>
-          <img src="" />
+          <div class="drink-text">
+            <h2></h2>
+            <p></p>
+          </div>
+          <div class="button">
+            <div class="quantity_wrapper">
+              <label for="quantity"></label>
+              <button class="minus">--</button>
+              <!-- <input type="button" class="minus" min="1" max="9" value="-" /> -->
+              <input class="quantity" name="quantity" min="1" max="9" value="1" />
+              <!-- <input type="button" class="plus" min="1" max="9" value="+" /> -->
+              <button class="plus">+</button>
+            </div>
+
+            <div class="addcart_wrapper">
+              <button class="add">Add to cart</button>
+            </div>
+          </div>
+          <div class="drink-images">
+            <img src="" />
+          </div>
         </div>
       </template>
     </section>
