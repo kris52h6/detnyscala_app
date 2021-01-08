@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section id="cartlist"></section>
@@ -11,6 +12,10 @@
       <h2></h2>
       <h3></h3>
     </template>
+    <button class="proceed">Betaling</button>
+    <a href="index.html">
+      <button class="continue">Tilbage</button>
+    </a>
   </body>
   <script>
     "use strict";
@@ -20,6 +25,9 @@
     let cartlist = document.querySelector("#cartlist");
 
     function init() {
+      document.querySelector(".proceed").addEventListener("click", () => {
+        window.location.replace("checkout.html");
+      });
       let order = JSON.parse(currentOrder);
       console.log(order);
       const skabelon = document.querySelector("template");
