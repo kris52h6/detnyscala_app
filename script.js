@@ -33,8 +33,8 @@ function displayDrinks() {
       const klon = skabelon.cloneNode(true).content;
 
       klon.querySelector("h2").textContent = `${drink.gsx$navn.$t}`;
-      klon.querySelector("p").textContent = `${drink.gsx$pris.$t}` + ".-";
-      klon.querySelector("img").src = "img/" + `${drink.gsx$billedebeskrivelse.$t}` + ".png";
+      klon.querySelector("p").textContent = `${drink.gsx$pris.$t}` + ",-";
+      // klon.querySelector("img").src = "img/" + `${drink.gsx$billedebeskrivelse.$t}` + ".png";
 
       klon.querySelector(".add").id = counter;
       klon.querySelector(".plus").id = counter;

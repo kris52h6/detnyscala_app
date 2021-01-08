@@ -1,14 +1,6 @@
 
 "use strict";
 
-window.addEventListener("load", init2);
-
-function init2(){
-
-
-}
-
-
 // Open and close barlist
 function openNav() {
     document.getElementById("drinks").style.width = "100vw";
