@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <section id="cartlist"></section>
+    <template>
+      <h2></h2>
+      <h3></h3>
+    </template>
+  </body>
+  <script>
+    "use strict";
+
+    window.addEventListener("DOMContentLoaded", init);
+    let currentOrder = localStorage.getItem("order");
+    let cartlist = document.querySelector("#cartlist");
+
+    function init() {
+      let order = JSON.parse(currentOrder);
+      console.log(order);
+      const skabelon = document.querySelector("template");
+
+      order.forEach((order) => {
+        const klon = skabelon.cloneNode(true).content;
+        klon.querySelector("h2").textContent = order.name;
+        klon.querySelector("h3").textContent = order.amount;
+        // klon.querySelector("h2").textContent = order.amount;
+
+        // klon.querySelector(".remove").addEventListener("click", () => {
+        //   removeBeer(orderParse, order);
+        // });
+        cartlist.appendChild(klon);
+      });
+    }
+  </script>
+</html>
