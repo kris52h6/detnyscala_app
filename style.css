@@ -22,6 +22,11 @@ main {
   background-image: url("img/scala_splashv2-100.jpg");
 }
 
+.drink-images {
+  width: 150px;
+  height: 150px;
+}
+
 /* .valgt {
   text-decoration: none;
   border-bottom: 0.1em solid #1b5728;

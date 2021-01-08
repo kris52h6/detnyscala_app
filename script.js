@@ -4,6 +4,8 @@ window.addEventListener("load", init);
 
 let myJson = [];
 let filterDrinks;
+let cartArray = [];
+let totalAmount = [];
 const modtagerKloner = document.querySelector(".drink-list");
 const skabelon = document.querySelector("template");
 const jsonURL = "https://spreadsheets.google.com/feeds/list/1nRqF5lFLfFwqBjdwU2A4iBeRXdWZWzWTZoqy-GASEX4/od6/public/values?alt=json";
@@ -23,6 +25,7 @@ async function getJson() {
 }
 
 function displayDrinks() {
+  let counter = 0;
   modtagerKloner.innerHTML = "";
   console.log(filterDrinks);
   myJson.feed.entry.forEach((drink) => {
@@ -33,11 +36,50 @@ function displayDrinks() {
       klon.querySelector("p").textContent = `${drink.gsx$pris.$t}` + ".-";
       klon.querySelector("img").src = "img/" + `${drink.gsx$billedebeskrivelse.$t}` + ".png";
 
-      // klon.querySelector("img").src = `${drink.gsx$billedelink}`;
+      klon.querySelector(".add").id = counter;
+      klon.querySelector(".plus").id = counter;
+      klon.querySelector(".minus").id = counter;
+
+      klon.querySelector(".minus").addEventListener("click", () => {
+        drinkMinus();
+      });
+
+      klon.querySelector(".plus").addEventListener("click", () => {
+        drinkPlus();
+      });
+      klon.querySelector(".add").addEventListener("click", (event) => {
+        countDrinks(drink, event);
+      }); // klon.querySelector("img").src = `${drink.gsx$billedelink}`;
 
       modtagerKloner.appendChild(klon);
     }
+    counter++;
   });
+}
+
+function countDrinks(drink, event) {
+  let drinkAmount = document.querySelectorAll(".quantity")[event.target.id].value;
+
+  totalAmount.push(drinkAmount);
+  let drinkObject = {
+    name: drink.gsx$navn.$t,
+    amount: drinkAmount,
+  };
+  console.log(drinkObject);
+  cartArray.push(drinkObject);
+  localStorage.setItem("order", JSON.stringify(cartArray));
+}
+
+function drinkMinus() {
+  if (document.querySelectorAll(".quantity")[event.target.id].value > 1) {
+    document.querySelectorAll(".quantity")[event.target.id].value--;
+  }
+}
+
+function drinkPlus() {
+  if (document.querySelectorAll(".quantity")[event.target.id].value < 9) {
+    document.querySelectorAll(".quantity")[event.target.id].value++;
+  }
 }
 
 function handleFilter() {
