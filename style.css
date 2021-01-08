@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
 img {
   width: 100%;
 }
@@ -86,4 +94,117 @@ main {
   top: 0;
   right: 25px;
   font-size: 36px;
+}
+
+/** checkout **/
+.title .arrowback {
+  text-decoration: none;
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#subscribe_form {
+  margin-top: 4vw;
+  display: grid;
+  justify-content: center;
+}
+
+form {
+  width: 100vw;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+label {
+  color: black;
+}
+
+input[type="text"],
+input[type="number"] {
+  background-color: #d3d3d3;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0.2rem;
+  border: none;
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  height: 3rem;
+  width: 100%;
+  margin-top: 5px;
+  animation: dissappear 1s linear;
+}
+
+/* input[type="text"]:hover {
+} */
+
+input[type="submit"] {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #631fee;
+  border: 0px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.details_wrapper {
+  display: flex;
+}
+
+.icon_container img {
+  width: 50px;
+  height: 50px;
+}
+
+.expire {
+  width: 15vw;
+}
+
+.cvc {
+  margin-left: 20px;
+  width: 10vw;
+}
+
+.cvc .pristine-error {
+  width: 35vw;
+}
+
+.proceed {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #631fee;
+  border: 0px;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 45px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.continue {
+  cursor: pointer;
+  border: 1px solid black;
+  width: 100%;
+  height: 55px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  line-height: 45px;
+  background-color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
 }

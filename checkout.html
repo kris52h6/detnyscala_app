@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Det Ny Scala Checkout</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="title">
+      <a href="cart.html" class="arrowback">←</a>
+      <h1>Betaling</h1>
+
+    </div>
+
+    <div id="form_wrap">
+      <section id="subscribe_form">
+        <form>
+          <!-- <form action="test.html" method="POST"> -->
+            <div class="form-group">
+          <label for="name">Navn</label>
+          <input type="text" id="name" placeholder="John Doe"  minlength="4" required data-pristine-required-message="Name must have atleast 4 characters"  />
+        </div>
+        <div class="form-group">
+
+          <label for="cardnumber">Kortnummer</label>
+          <input type="number" id="cardnumber" placeholder="1234 5678 3456 2456" value="" minlength="16" maxlength="16" required data-pristine-required-message="Cardnumber must be 16 characters"  />
+        </div>
+
+          <div class="details_wrapper">
+            <div class="form-group">
+            <div class="expire">
+              <label for="expire">EXPIRE</label>
+              <input type="number" id="expire" placeholder="05 / 21" value="" minlength="4" maxlength="4" required data-pristine-required-message="Must have 2 dates" />
+            </div>
+            </div>
+
+            <div class="cvc">
+              <div class="form-group">
+              <label for="cvc">CVC</label>
+              <input type="text" id="cvc" placeholder="123" minlength="3" maxlength="3" required data-pristine-required-message="CVC must be 3 characters" />
+            </div>
+            </div>
+            
+            
+          </div>
+          
+          <label for="fname">Accepted Cards</label>
+            <div class="icon_container">
+              <img src="icons/visa.png">
+              <img src="icons/mastercard.png">
+
+          <input type="submit" value="Accepter" />
+        </form>
+      </section>
+
+
+      <a href="cart.html">
+        <button class="continue">Tilbage</button>
+      </a>
+    </div>
+    <!-- <div class="purchaseModal">
+      <h1>Thank you for your purchase!</h1>
+      <div class="loadingbars">
+        <h2>Redirecting to beers</h2>
+
+        <div class="loading"></div>
+        <div class="loading"></div>
+        <div class="loading"></div>
+      </div>
+    </div> -->
+  </body>
+  <!-- <script src="checkout.js"></script> -->
+
+</html>
