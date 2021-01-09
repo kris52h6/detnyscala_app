@@ -5,7 +5,7 @@ window.addEventListener("load", init);
 let myJson = [];
 let filterDrinks;
 let cartArray = [];
-let totalAmount = [];
+
 const modtagerKloner = document.querySelector(".drink-list");
 const skabelon = document.querySelector("template");
 const jsonURL = "https://spreadsheets.google.com/feeds/list/1nRqF5lFLfFwqBjdwU2A4iBeRXdWZWzWTZoqy-GASEX4/od6/public/values?alt=json";
@@ -40,8 +40,8 @@ function displayDrinks() {
       klon.querySelector(".minus").id = counter;
       klon.querySelector(".quantity").id = counter;
 
-      klon.querySelector(".minus").addEventListener("click", () => {
-        drinkMinus();
+      klon.querySelector(".minus").addEventListener("click", (event) => {
+        drinkMinus(event);
       });
 
       klon.querySelector(".plus").addEventListener("click", (event) => {
@@ -59,17 +59,16 @@ function displayDrinks() {
 
 function countDrinks(drink, event) {
   let drinkAmount = document.querySelectorAll(".quantity")[event.target.id].value;
-  console.log(document.querySelectorAll(".quantity")[event.target.id].value);
-  totalAmount.push(drinkAmount);
   let drinkObject = {
     name: drink.gsx$navn.$t,
     amount: drinkAmount,
+    price: drink.gsx$pris.$t,
   };
   cartArray.push(drinkObject);
   localStorage.setItem("order", JSON.stringify(cartArray));
 }
 
-function drinkMinus() {
+function drinkMinus(event) {
   if (document.querySelectorAll(".quantity")[event.target.id].value > 1) {
     document.querySelectorAll(".quantity")[event.target.id].value--;
   }

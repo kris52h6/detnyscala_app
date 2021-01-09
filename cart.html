@@ -46,7 +46,8 @@
 
     window.addEventListener("DOMContentLoaded", init);
     let currentOrder = localStorage.getItem("order");
-    let cartlist = document.querySelector("#cartlist");
+    const cartlist = document.querySelector("#cartlist");
+    const skabelon = document.querySelector("template");
 
     function init() {
       document.querySelector(".proceed").addEventListener("click", () => {
@@ -54,13 +55,10 @@
       });
       let order = JSON.parse(currentOrder);
       console.log(order);
-      const skabelon = document.querySelector("template");
-      console.log(currentOrder);
       order.forEach((order) => {
         const klon = skabelon.cloneNode(true).content;
         klon.querySelector("h2").textContent = order.name;
         klon.querySelector("h3").textContent = "x" + order.amount;
-        // klon.querySelector("h2").textContent = order.amount;
 
         // klon.querySelector(".remove").addEventListener("click", () => {
         //   removeBeer(orderParse, order);
@@ -69,12 +67,11 @@
         cartlist.appendChild(klon);
       });
 
-      let orderPrice = 0;
+      let totalPrice = 0;
       for (let i = 0; i < order.length; i++) {
-        orderPrice = +order[i].amount + orderPrice;
-        console.log(orderPrice);
+        totalPrice = +order[i].amount * order[i].price + totalPrice;
       }
-      document.querySelector("body > div.total > h3").textContent = orderPrice * 49 + " DKK";
+      document.querySelector("body > div.total > h3").textContent = totalPrice + " DKK";
     }
   </script>
 </html>
