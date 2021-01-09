@@ -30,9 +30,7 @@ main {
   background-image: url("img/scala_splashv2-100.jpg");
 }
 
-<<<<<<< HEAD
-=======
-#cartwrapper {
+/* #cartwrapper {
   margin-top: 20px;
   background-color: white;
   display: flex;
@@ -42,14 +40,8 @@ main {
   -moz-box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
   box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
   border-radius: 5px;
-}
+} */
 
-.drink-images {
-  width: 150px;
-  height: 150px;
-}
-
->>>>>>> 0a6aabb6ea41994329909cb69eae6c245ff83051
 /* .valgt {
   text-decoration: none;
   border-bottom: 0.1em solid #1b5728;
@@ -138,17 +130,29 @@ main {
 }
 
 .left {
-  width: 100%;
+  width: 45vw;
+}
+
+.right {
+  width: 40vw;
 }
 
 .drink-images {
-  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+}
 
+.drink-images img {
+  height: 200px;
+  width: 200px;
   object-fit: contain;
 }
 
 #drinks h1,
 h2,
+h3,
 p {
   font-family: "Bebas Neue", cursive;
 }
@@ -157,18 +161,26 @@ p {
   width: 100%;
 }
 .quantity {
-  height: 24px;
-  width: 28px;
+  height: 50px;
+  width: 50px;
   margin-top: 30px;
   border: 1px solid black;
   text-align: center;
   font-family: "Quicksand", sans-serif;
 }
+
+.quantity_wrapper {
+  min-width: 100%;
+}
+
+#form_wrap {
+  font-family: "Quicksand", sans-serif;
+}
 .minus,
 .plus {
   margin-top: 30px;
-  width: 28px;
-  height: 24px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   border: 0.1px solid black;
   cursor: pointer;
@@ -177,7 +189,7 @@ p {
 .add {
   margin-top: 5px;
   width: 100%;
-  height: 25px;
+  height: 40px;
   background-color: #333232;
   color: white;
   font-size: 0.8rem;
@@ -223,27 +235,34 @@ input[type="number"] {
   font-size: 0.875em;
   margin: 0 0 1em 0;
   padding: 0.5em;
-  height: 3rem;
+  height: 4rem;
   width: 100%;
   margin-top: 5px;
   animation: dissappear 1s linear;
+}
+
+#expire,
+#cvc {
+  height: 3rem;
 }
 
 /* input[type="text"]:hover {
 } */
 
 input[type="submit"] {
-  cursor: pointer;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
-  background-color: #631fee;
-  border: 0px;
+  background-color: #f7f7f7;
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  cursor: pointer;
   width: 100%;
   height: 50px;
+  line-height: 50px;
   text-align: center;
-  color: white;
-  font-size: 1.5rem;
-  border-radius: 5px;
+  color: black;
+  border: 1px solid black;
 }
 
 .details_wrapper {
@@ -269,19 +288,19 @@ input[type="submit"] {
 }
 
 .proceed {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
-  background-color: #631fee;
-  border: 0px;
-  width: 100%;
-  height: 60px;
-  text-align: center;
+  background-color: #f7f7f7;
   text-decoration: none;
-  color: white;
   font-size: 1.2rem;
-  line-height: 45px;
+
   cursor: pointer;
-  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
 }
 
 .continue {
