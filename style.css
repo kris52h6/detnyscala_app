@@ -41,18 +41,12 @@ main {
   box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
   border-radius: 5px;
 }
-*/
 
-/* .valgt {
-  text-decoration: none;
-  border-bottom: 0.1em solid #1b5728;
-} */
-
-/* .drink-list {
+.drink-list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
-} */
+}
 
 .logo_container_large {
   width: 100%;
@@ -165,7 +159,7 @@ p {
 .quantity {
   height: 50px;
   width: 50px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   border: 1px solid black;
   text-align: center;
   font-family: "Quicksand", sans-serif;
