@@ -99,10 +99,5 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("drinks").style.width = "0";
-<<<<<<< HEAD
   document.getElementById("drinks").style.padding = "0 0 0 0";
 }
-=======
-  // document.getElementById("drinks").style.padding = "60px 0 0 0";
-}
->>>>>>> 0a6aabb6ea41994329909cb69eae6c245ff83051
