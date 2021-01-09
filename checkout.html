@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Det Ny Scala Checkout</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    
   </head>
+  
   <body>
+    <style>
+        body {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        h1 {
+            padding-top: 50px;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
     <div class="title">
       <a href="cart.html" class="arrowback">←</a>
       <h1>Betaling</h1>
@@ -40,16 +55,13 @@
               <label for="cvc">CVC</label>
               <input type="text" id="cvc" placeholder="123" minlength="3" maxlength="3" required data-pristine-required-message="CVC must be 3 characters" />
             </div>
-            </div>
-            
-            
+            </div>    
           </div>
-          
+        
           <label for="fname">Accepted Cards</label>
             <div class="icon_container">
-              <img src="icons/visa.png">
-              <img src="icons/mastercard.png">
-
+              <img src="img/visa.png">
+              <img src="img/mastercard.png">
           <input type="submit" value="Accepter" />
         </form>
       </section>
@@ -59,17 +71,49 @@
         <button class="continue">Tilbage</button>
       </a>
     </div>
-    <!-- <div class="purchaseModal">
-      <h1>Thank you for your purchase!</h1>
+    <div class="purchaseModal">
+      <h1>Tak for dit køb!</h1>
       <div class="loadingbars">
-        <h2>Redirecting to beers</h2>
+        <h2>Omdirigere til forsiden</h2>
 
         <div class="loading"></div>
         <div class="loading"></div>
         <div class="loading"></div>
       </div>
-    </div> -->
+    </div>
   </body>
-  <!-- <script src="checkout.js"></script> -->
+  <script>
+      "use strict";
+
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
+  postFunction();
+}
+
+// henter ordren fra local storage, og tilføjer click på accept knappen, som kalder postBeer
+function postFunction() {
+  const form = document.querySelector("form");
+  let currentOrder = localStorage.getItem("order");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    postBeer();
+});
+
+}
+
+// poster data fra localStorage (som er kundens køb)
+function postBeer() {
+    document.querySelector("#form_wrap").style.display = "none";
+  document.querySelector(".purchaseModal").style.display = "flex";
+
+  setInterval(() => {
+    window.location.replace("index.html");
+    localStorage.clear();
+  }, 3000);
+}
+
+
+  </script>
 
 </html>
