@@ -33,7 +33,7 @@ function displayDrinks() {
 
       klon.querySelector("h2").textContent = `${drink.gsx$navn.$t}`;
       klon.querySelector("p").textContent = `${drink.gsx$pris.$t}` + ",-";
-      // klon.querySelector("img").src = "img/" + `${drink.gsx$billedebeskrivelse.$t}` + ".png";
+      klon.querySelector("img").src = "img/" + `${drink.gsx$billedebeskrivelse.$t}` + ".png";
 
       klon.querySelector(".add").id = counter;
       klon.querySelector(".plus").id = counter;
@@ -95,10 +95,10 @@ function handleFilter() {
 // Open and close barlist
 function openNav() {
   document.getElementById("drinks").style.width = "100vw";
-  // document.getElementById("drinks").style.padding = "60px 20px 0 20px";
+  document.getElementById("drinks").style.padding = "0 20px 0 20px";
 }
 
 function closeNav() {
   document.getElementById("drinks").style.width = "0";
-  // document.getElementById("drinks").style.padding = "60px 0 0 0";
+  document.getElementById("drinks").style.padding = "0 0 0 0";
 }

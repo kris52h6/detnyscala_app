@@ -30,11 +30,6 @@ main {
   background-image: url("img/scala_splashv2-100.jpg");
 }
 
-.drink-images {
-  width: 150px;
-  height: 150px;
-}
-
 /* .valgt {
   text-decoration: none;
   border-bottom: 0.1em solid #1b5728;
@@ -85,15 +80,89 @@ main {
   right: 0;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   background-color: white;
 }
 
 .closebtn {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 25px;
-  font-size: 36px;
+  font-size: 2.5rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin: 10px;
+}
+
+.top h1 {
+  font-size: 2rem;
+  margin-left: 30px;
+}
+
+.logo_container_small {
+  width: 30%;
+}
+
+.wrapper {
+  background-color: #f2a6a6;
+  border: black 1px solid;
+  /* margin: 10px; */
+  padding: 10px;
+  width: 100%;
+
+  display: flex;
+}
+
+.left {
+  width: 100%;
+}
+
+.drink-images {
+  width: 100%;
+
+  object-fit: contain;
+}
+
+#drinks h1,
+h2,
+p {
+  font-family: "Bebas Neue", cursive;
+}
+
+.order_button {
+  width: 100%;
+}
+.quantity {
+  height: 24px;
+  width: 28px;
+  margin-top: 30px;
+  border: 1px solid black;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+}
+.minus,
+.plus {
+  margin-top: 30px;
+  width: 28px;
+  height: 24px;
+  background-color: white;
+  border: 0.1px solid black;
+  cursor: pointer;
+}
+
+.add {
+  margin-top: 5px;
+  width: 100%;
+  height: 25px;
+  background-color: #333232;
+  color: white;
+  font-size: 0.8rem;
+  border: 0px;
+  cursor: pointer;
 }
 
 /** checkout **/
@@ -202,9 +271,13 @@ input[type="submit"] {
   height: 55px;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: white;
   line-height: 45px;
-  background-color: white;
+  background-color: #333232;
   font-size: 1.2rem;
-  border-radius: 5px;
+}
+
+.continue a {
+  color: white;
+  text-decoration: none;
 }

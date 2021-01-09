@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Det Ny Scala Prototype</title>
     <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div class="splash-img"></div>
@@ -21,18 +27,20 @@
       </div>
       <section id="drinks" class="sidepanel">
         <div class="closebtn" onclick="closeNav()">×</div>
-        <!-- <div class="logo_container_small"><img src="img/scala_logo.png" alt="" /></div> -->
-        <h1></h1>
+        <div class="top">
+          <div class="logo_container_small"><img src="img/scala_logo.png" alt="" /></div>
+          <h1></h1>
+        </div>
         <section class="drink-list"></section>
         <template>
           <div class="wrapper">
             <div class="left">
               <h2></h2>
               <p></p>
-              <div class="button">
+              <div class="order_button">
                 <div class="quantity_wrapper">
                   <label for="quantity"></label>
-                  <button class="minus">--</button>
+                  <button class="minus">-</button>
                   <input class="quantity" name="quantity" min="1" max="9" value="1" />
                   <button class="plus">+</button>
                 </div>
@@ -43,15 +51,15 @@
               </div>
             </div>
 
-            <div class="drink-images">
+            <div class="drink-images right">
               <img src="" />
             </div>
           </div>
         </template>
+        <button class="continue">
+          <a href="cart.html">Continue</a>
+        </button>
       </section>
-      <button class="continue">
-        <a href="cart.html">Continue</a>
-      </button>
     </main>
   </body>
   <script src="script.js"></script>
