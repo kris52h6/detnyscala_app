@@ -30,6 +30,18 @@ main {
   background-image: url("img/scala_splashv2-100.jpg");
 }
 
+#cartwrapper {
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  -webkit-box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
+  box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
+  border-radius: 5px;
+}
+
 .drink-images {
   width: 150px;
   height: 150px;
@@ -207,4 +219,48 @@ input[type="submit"] {
   background-color: white;
   font-size: 1.2rem;
   border-radius: 5px;
+}
+
+/** checkout ***/
+
+.purchaseModal {
+  width: 80vw;
+  display: none;
+  margin: auto;
+  margin-top: 20vw;
+  height: 200px;
+  color: black;
+  background-color: white;
+  animation: purchase 1s linear;
+  margin-bottom: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  -webkit-box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
+  box-shadow: 2px 1px 12px -1px rgba(0, 0, 0, 0.59);
+}
+
+.loading {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  margin-top: 23px;
+  margin-left: 2px;
+  animation: dots 2s infinite;
+}
+
+.loadingbars {
+  display: flex;
+}
+
+.loading:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+@keyframes dots {
+  50% {
+    opacity: 0;
+  }
 }
