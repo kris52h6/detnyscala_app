@@ -167,7 +167,7 @@ p {
 .quantity {
   height: 50px;
   width: 50px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   border: 1px solid black;
   text-align: center;
   font-family: "Quicksand", sans-serif;
@@ -326,6 +326,14 @@ input[type="submit"] {
 .continue a {
   color: white;
   text-decoration: none;
+}
+
+.sidepanel .continue {
+  position: fixed;
+  bottom: 0;
+
+  /* right: 0; */
+  margin-bottom: 0;
 }
 
 /** checkout ***/

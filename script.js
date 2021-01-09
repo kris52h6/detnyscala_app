@@ -95,10 +95,13 @@ function handleFilter() {
 // Open and close barlist
 function openNav() {
   document.getElementById("drinks").style.width = "100vw";
-  document.getElementById("drinks").style.padding = "0 20px 0 20px";
+  document.getElementById("drinks").style.padding = "0 20px 100px 20px";
+  document.getElementById("stuck").style.right = "0";
+
 }
 
 function closeNav() {
   document.getElementById("drinks").style.width = "0";
   document.getElementById("drinks").style.padding = "0 0 0 0";
+  document.getElementById("stuck").style.right = "";
 }
