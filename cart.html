@@ -22,12 +22,24 @@
       .order_wrapper {
         background-color: #f2a6a6;
         border: black 1px solid;
-        /* margin: 10px; */
+        margin-bottom: 10px;
         padding: 10px;
         width: 100%;
 
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+      }
+
+      .continue {
+        margin: 0px 0 0 0;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
       }
 
       .order_wrapper h3 {
@@ -58,37 +70,5 @@
       <button class="continue">Tilbage</button>
     </a>
   </body>
-  <script>
-    "use strict";
-
-    window.addEventListener("DOMContentLoaded", init);
-    let currentOrder = localStorage.getItem("order");
-    const cartlist = document.querySelector("#cartlist");
-    const skabelon = document.querySelector("template");
-
-    function init() {
-      document.querySelector(".proceed").addEventListener("click", () => {
-        window.location.replace("checkout.html");
-      });
-      let order = JSON.parse(currentOrder);
-      console.log(order);
-      order.forEach((order) => {
-        const klon = skabelon.cloneNode(true).content;
-        klon.querySelector("h2").textContent = order.name;
-        klon.querySelector("h3").textContent = "x" + order.amount;
-
-        // klon.querySelector(".remove").addEventListener("click", () => {
-        //   removeBeer(orderParse, order);
-        // });
-
-        cartlist.appendChild(klon);
-      });
-
-      let totalPrice = 0;
-      for (let i = 0; i < order.length; i++) {
-        totalPrice = +order[i].amount * order[i].price + totalPrice;
-      }
-      document.querySelector("body > div.total > h3").textContent = totalPrice + " DKK";
-    }
-  </script>
+  <script src="cart.js"></script>
 </html>
