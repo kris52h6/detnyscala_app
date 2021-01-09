@@ -9,7 +9,6 @@ function init() {
 // henter ordren fra local storage, og tilføjer click på accept knappen, som kalder postBeer
 function postFunction() {
   const form = document.querySelector("form");
-  let currentOrder = localStorage.getItem("order");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     postBeer();

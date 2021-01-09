@@ -88,6 +88,7 @@ function handleFilter() {
   filterDrinks = this.dataset.kategori;
   this.classList.add("valgt");
   document.querySelector("h1").textContent = filterDrinks;
+
   displayDrinks();
 }
 

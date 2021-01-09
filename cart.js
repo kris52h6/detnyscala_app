@@ -10,7 +10,6 @@ function init() {
     window.location.replace("checkout.html");
   });
   let order = JSON.parse(currentOrder);
-  console.log(order);
   order.forEach((order) => {
     const klon = skabelon.cloneNode(true).content;
     klon.querySelector("h2").textContent = order.name;
